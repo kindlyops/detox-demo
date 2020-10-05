@@ -1,0 +1,21 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "ios": {
+      "type": "ios.simulator",
+      "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/DemoApp.xcworkspace -scheme DemoApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/DemoApp.app",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
